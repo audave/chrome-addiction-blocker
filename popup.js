@@ -1,13 +1,13 @@
 
 async function loadSettings() {
-  chrome.storage.sync.get("sites1", async ({sites1}) => {
+  chrome.storage.sync.get("sites", async ({sites}) => {
     let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
     let url = new URL(tab.url);
-    if (typeof sites1[url.hostname] != 'undefined') {
-      console.log(sites1);
-      document.getElementById("greyscale").checked = sites1[url.hostname].greyscale;
-      document.getElementById("autologout").checked = sites1[url.hostname].autologout;
-      document.getElementById("delay").value = sites1[url.hostname].delay;
+    if (typeof sites[url.hostname] != 'undefined') {
+      console.log(sites);
+      document.getElementById("greyscale").checked = sites[url.hostname].greyscale;
+      document.getElementById("autologout").checked = sites[url.hostname].autologout;
+      document.getElementById("delay").value = sites[url.hostname].delay;
 
     }
   });
@@ -33,17 +33,14 @@ async function saveSettings() {
     autologout: document.getElementById("autologout").checked,
     delay: document.getElementById("delay").value,
   }
-  let somevar = chrome.storage.sync.get('sites1', ({ sites }) => {
-    if(typeof sites1 === 'undefined') {
-      sites1 = new Object();
+  let somevar = chrome.storage.sync.get('sites', ({ sites }) => {
+    if(typeof sites === 'undefined') {
+      sites = new Object();
     }
-    sites1[url.hostname] = site_config;
+    sites[url.hostname] = site_config;
     // let url = new URL(tab.url);
     // sites.url.hostname = site_config
     // sites.push(site_config);
-    chrome.storage.sync.set({sites1});
+    chrome.storage.sync.set({sites});
   });
-  // chrome.storage.sync.set({sites1});
-  // console.log(sites);
-  // console.log(site_config);
 }
