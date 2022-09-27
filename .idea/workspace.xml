@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d24efb39-02c7-4b6e-a881-4b2118907fbd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/overlay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/popup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/popup.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/popup.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/jquery.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/overlay.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/addiction_blocker.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/options.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/options.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/background.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/popup.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2E9IkgCMhepIDvc8wnZylrc1I2O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d24efb39-02c7-4b6e-a881-4b2118907fbd" name="Changes" comment="" />
+      <created>1662001518399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662001518399</updated>
+      <workItem from="1662001519568" duration="8192000" />
+      <workItem from="1662099544508" duration="3073000" />
+      <workItem from="1663120926975" duration="555000" />
+      <workItem from="1663657885984" duration="6146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

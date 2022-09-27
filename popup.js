@@ -1,24 +1,49 @@
-// Initialize butotn with users's prefered color
-let changeColor = document.getElementById("changeColor");
 
-chrome.storage.sync.get("color", ({ color }) => {
-  changeColor.style.backgroundColor = color;
-});
+async function loadSettings() {
+  chrome.storage.sync.get("sites1", async ({sites1}) => {
+    let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+    let url = new URL(tab.url);
+    if (typeof sites1[url.hostname] != 'undefined') {
+      console.log(sites1);
+      document.getElementById("greyscale").checked = sites1[url.hostname].greyscale;
+      document.getElementById("autologout").checked = sites1[url.hostname].autologout;
+      document.getElementById("delay").value = sites1[url.hostname].delay;
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
+    }
+  });
+}
+
+loadSettings();
+
+let annoyanceOptions = document.getElementsByClassName('form-input');
+for(var i = 0; i < annoyanceOptions.length; i++) {
+  (function(index) {
+    annoyanceOptions[index].addEventListener("change", function() {
+      saveSettings();
+    })
+  })(i);
+}
+
+async function saveSettings() {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    function: setPageBackgroundColor,
+  let url = new URL(tab.url);
+  var site_config = {
+    url: url.hostname,
+    greyscale: document.getElementById("greyscale").checked,
+    autologout: document.getElementById("autologout").checked,
+    delay: document.getElementById("delay").value,
+  }
+  let somevar = chrome.storage.sync.get('sites1', ({ sites }) => {
+    if(typeof sites1 === 'undefined') {
+      sites1 = new Object();
+    }
+    sites1[url.hostname] = site_config;
+    // let url = new URL(tab.url);
+    // sites.url.hostname = site_config
+    // sites.push(site_config);
+    chrome.storage.sync.set({sites1});
   });
-});
-
-// The body of this function will be execuetd as a content script inside the
-// current page
-function setPageBackgroundColor() {
-  chrome.storage.sync.get("color", ({ color }) => {
-    document.body.style.backgroundColor = color;
-  });
+  // chrome.storage.sync.set({sites1});
+  // console.log(sites);
+  // console.log(site_config);
 }
